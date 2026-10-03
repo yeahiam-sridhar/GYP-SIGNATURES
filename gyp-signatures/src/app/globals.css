@@ -1,0 +1,270 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #FAF8F5;
+  --color-cream: #F5F0EB;
+  --color-sand: #E8DFD5;
+  --color-taupe: #C4B5A5;
+  --color-stone: #A89888;
+  --color-walnut: #6B4C3B;
+  --color-deep-brown: #3D2B1F;
+  --color-charcoal: #2A2A2A;
+  --color-bronze: #A0845C;
+  --color-bronze-light: #C4A97D;
+
+  --font-serif: 'Cinzel', Georgia, serif;
+  --font-sans: 'Josefin Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Base reset and global styles */
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-ivory);
+  color: var(--color-charcoal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-bronze-light);
+  color: var(--color-ivory);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ivory);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-taupe);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-stone);
+}
+
+.custom-modal-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-modal-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-modal-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-sand);
+  border-radius: 2px;
+}
+.custom-modal-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--color-bronze);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.heading-display {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.heading-editorial {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.heading-section {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.text-overline {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-stone);
+}
+
+.text-body {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+}
+
+.text-body-lg {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+.section-padding {
+  padding-left: clamp(1.5rem, 5vw, 8rem);
+  padding-right: clamp(1.5rem, 5vw, 8rem);
+}
+
+.section-spacing {
+  padding-top: clamp(4rem, 10vh, 10rem);
+  padding-bottom: clamp(4rem, 10vh, 10rem);
+}
+
+/* Tighter spacing for content-dense sections or same-background pairs.
+   Still generous at 64–96px — intentional, not cramped. */
+.section-spacing-sm {
+  padding-top: clamp(3rem, 6vh, 6rem);
+  padding-bottom: clamp(3rem, 6vh, 6rem);
+}
+
+.line-separator {
+  height: 1px;
+  background: var(--color-sand);
+  width: 100%;
+}
+
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  /* Always bronze — the brand accent — regardless of nav scroll state */
+  background-color: var(--color-bronze);
+  transition: width 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+.btn-primary {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  border: 1px solid var(--color-charcoal);
+  background: transparent;
+  color: var(--color-charcoal);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s ease, background-color 0.4s ease;
+}
+
+.btn-primary:hover {
+  background: var(--color-charcoal);
+  color: var(--color-ivory);
+}
+
+.btn-secondary {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 1rem 2.5rem;
+  border: 1px solid var(--color-bronze);
+  background: var(--color-bronze);
+  color: var(--color-ivory);
+  cursor: pointer;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--color-walnut);
+  border-color: var(--color-walnut);
+}
+
+/* ============================================================
+   GYP SIGNATURES — Premium micro-motion additions
+   All animations respect prefers-reduced-motion below.
+   ============================================================ */
+
+/* Slow editorial breath — replaces animate-pulse on the offer dot.
+   Luxury pace: 3 s cycle, subtle opacity only, never distracting. */
+@keyframes gyp-breathe {
+  0%, 100% { opacity: 0.55; }
+  50%       { opacity: 1;    }
+}
+.gyp-breathe {
+  animation: gyp-breathe 3s ease-in-out infinite;
+}
+
+/* FAQ accordion — smooth max-height reveal.
+   Using max-height + overflow hidden instead of height:auto
+   because height transitions don't animate from auto. */
+.faq-body {
+  display: block;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition:
+    max-height 0.42s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity    0.30s ease;
+}
+.faq-body.faq-open {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Scroll progress bar — 1 px bronze line at top of viewport */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--color-bronze) 0%, var(--color-bronze-light) 100%);
+  transform-origin: left center;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .faq-body {
+    transition: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading-display {
+    letter-spacing: 0.04em;
+  }
+  .text-overline {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+  }
+}

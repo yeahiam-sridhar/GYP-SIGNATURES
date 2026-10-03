@@ -19,7 +19,7 @@ export default function Footer() {
             >
               <Image
                 src="/images/logo-light.png"
-                alt="GYP Signatures"
+                alt="GYP Signatures Logo"
                 width={263}
                 height={87}
                 className="w-[155px] md:w-[175px] h-auto object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-300"

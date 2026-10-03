@@ -164,7 +164,7 @@ export default function HeroVideo() {
       {/* Fallback poster image underneath canvas for instant zero-latency paint */}
       <img
         src="/video/hero-poster.jpg"
-        alt="GYP Signatures"
+        alt="GYP Signatures — Luxury Interior Design and Bespoke Furniture"
         className="absolute inset-0 w-full h-full object-cover"
         fetchPriority="high"
       />
@@ -186,6 +186,7 @@ export default function HeroVideo() {
         {/* Brand name */}
         <h1 className="heading-display text-ivory text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-4 sm:mb-8 md:mb-12 drop-shadow-[0_2px_18px_rgba(0,0,0,0.85)] [text-shadow:_0_2px_14px_rgba(0,0,0,0.7)]">
           GYP Signatures
+          <span className="sr-only"> — Interior Design &amp; Bespoke Furniture Studio</span>
         </h1>
 
         {/* Tagline words */}

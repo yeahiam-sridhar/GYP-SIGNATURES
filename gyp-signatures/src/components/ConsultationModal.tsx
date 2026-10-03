@@ -436,7 +436,7 @@ export default function ConsultationModal() {
             <div className="flex items-center gap-3 sm:gap-4">
               <Image
                 src="/images/logo-dark.png"
-                alt="GYP Signatures"
+                alt="GYP Signatures Logo"
                 width={263}
                 height={87}
                 className="w-[110px] sm:w-[135px] h-auto object-contain"

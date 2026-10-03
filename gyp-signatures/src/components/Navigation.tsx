@@ -64,7 +64,7 @@ export default function Navigation() {
               {/* Light logo (Ivory/Bronze over dark hero or mobile menu) */}
               <Image
                 src="/images/logo-light.png"
-                alt="GYP Signatures"
+                alt="GYP Signatures Logo"
                 width={263}
                 height={87}
                 priority
@@ -75,7 +75,7 @@ export default function Navigation() {
               {/* Dark logo (Charcoal/Bronze over scrolled light navigation) */}
               <Image
                 src="/images/logo-dark.png"
-                alt="GYP Signatures"
+                alt="GYP Signatures Logo"
                 width={263}
                 height={87}
                 priority

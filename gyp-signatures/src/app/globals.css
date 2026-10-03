@@ -17,17 +17,41 @@
 }
 
 /* Base reset and global styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: auto;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
   font-family: var(--font-sans);
   background-color: var(--color-ivory);
   color: var(--color-charcoal);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: clip;
 }
 
 ::selection {
@@ -119,8 +143,12 @@ body {
 }
 
 .section-padding {
-  padding-left: clamp(1.5rem, 5vw, 8rem);
-  padding-right: clamp(1.5rem, 5vw, 8rem);
+  padding-left: clamp(1rem, 4vw, 8rem);
+  padding-right: clamp(1rem, 4vw, 8rem);
+}
+
+.safe-area-bottom {
+  padding-bottom: max(0.625rem, env(safe-area-inset-bottom));
 }
 
 .section-spacing {

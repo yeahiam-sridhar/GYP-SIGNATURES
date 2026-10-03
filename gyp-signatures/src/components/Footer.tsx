@@ -6,12 +6,12 @@ export default function Footer() {
   const { address, openingHours, email, mapsUrl, phoneDisplay, phoneTel, whatsappUrl, instagram, instagramHandle } = businessContact;
 
   return (
-    <footer className="bg-charcoal text-ivory section-padding border-t border-ivory/10">
+    <footer className="bg-charcoal text-ivory section-padding border-t border-ivory/10 pb-24 md:pb-0">
       {/* Main footer */}
       <div className="max-w-7xl mx-auto py-16 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-6 lg:gap-6 xl:gap-8">
           {/* Brand Column (Span 2 on large screens) */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="lg:col-span-2 space-y-4 min-w-0">
             <Link
               href="/"
               className="inline-block mb-2 group focus:outline-none focus:ring-1 focus:ring-bronze/40 rounded-sm"
@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
 
           {/* Explore */}
-          <div>
+          <div className="min-w-0">
             <h3 className="text-overline text-ivory/50 mb-5 tracking-[0.2em]">Explore</h3>
             <ul className="space-y-2.5">
               {[
@@ -74,7 +74,7 @@ export default function Footer() {
           </div>
 
           {/* Visit Studio */}
-          <div>
+          <div className="min-w-0">
             <h3 className="text-overline text-ivory/50 mb-5 tracking-[0.2em]">Visit Studio</h3>
             <div className="space-y-3 text-xs text-ivory/60 font-light">
               <div>
@@ -104,7 +104,7 @@ export default function Footer() {
           </div>
 
           {/* Connect */}
-          <div>
+          <div className="min-w-0">
             <h3 className="text-overline text-ivory/50 mb-5 tracking-[0.2em]">Connect</h3>
             <div className="space-y-3 text-xs text-ivory/60 font-light">
               <div>
@@ -149,9 +149,9 @@ export default function Footer() {
             <div className="mt-6 pt-4 border-t border-ivory/10">
               <a
                 href="#consultation"
-                className="btn-primary border-ivory/20 text-ivory/90 hover:bg-ivory hover:text-charcoal text-[0.65rem] px-4 py-2.5 block text-center tracking-[0.15em] uppercase"
+                className="w-full max-w-full text-center font-sans font-light text-[0.62rem] tracking-[0.14em] uppercase py-2.5 px-2 border border-ivory/25 text-ivory/90 hover:bg-ivory hover:text-charcoal transition-colors duration-300 block"
               >
-                Book a Consultation →
+                Book Consultation →
               </a>
             </div>
           </div>

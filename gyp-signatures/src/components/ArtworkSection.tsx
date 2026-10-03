@@ -67,7 +67,7 @@ export default function ArtworkSection() {
         {/* Asymmetric art grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 items-center">
           {/* Large image */}
-          <div className="md:col-span-7 relative overflow-hidden aspect-[16/9] shadow-sm">
+          <div className="md:col-span-7 relative overflow-hidden isolate min-w-0 aspect-[16/9] shadow-sm">
             <Image
               src="/images/interiors/artwork-feature.jpg"
               alt="Monumental contemporary abstract artwork in an architectural interior with walnut credenza"
@@ -77,7 +77,7 @@ export default function ArtworkSection() {
             />
           </div>
           {/* Tall image */}
-          <div className="md:col-span-5 relative overflow-hidden aspect-[3/4]">
+          <div className="md:col-span-5 relative overflow-hidden isolate min-w-0 aspect-[3/4]">
             <Image
               src="/images/interiors/bedroom.jpg"
               alt="Artwork above bedroom headboard"

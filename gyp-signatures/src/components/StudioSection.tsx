@@ -58,8 +58,8 @@ export default function StudioSection() {
         {/* Main Grid: Visuals + Verified Details */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
           {/* Studio Imagery Showcase */}
-          <div className="lg:col-span-7 studio-reveal">
-            <div className="relative aspect-[16/10] overflow-hidden rounded-sm bg-sand/30 shadow-md h-full min-h-[340px]">
+          <div className="lg:col-span-7 studio-reveal min-w-0">
+            <div className="relative w-full max-w-full aspect-[16/10] lg:h-full lg:min-h-[380px] overflow-hidden rounded-sm bg-sand/30 shadow-md">
               <Image
                 src="/images/materials/materials-overview.jpg"
                 alt="GYP Signatures Design Studio & Materials Gallery"
@@ -70,21 +70,21 @@ export default function StudioSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/20 to-transparent" />
               
               {/* Studio Highlights Badge */}
-              <div className="absolute bottom-6 left-6 right-6 flex flex-wrap gap-4 text-ivory">
-                <div className="bg-charcoal/80 backdrop-blur-md px-4 py-2 border border-ivory/10">
-                  <span className="text-[0.6rem] uppercase tracking-widest text-bronze-light block">Experience</span>
-                  <span className="text-xs font-light">Tactile Materials & Timber Joinery</span>
+              <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 flex flex-wrap gap-2 sm:gap-4 text-ivory max-w-full">
+                <div className="bg-charcoal/80 backdrop-blur-md px-3 sm:px-4 py-2 border border-ivory/10">
+                  <span className="text-[0.55rem] sm:text-[0.6rem] uppercase tracking-widest text-bronze-light block">Experience</span>
+                  <span className="text-[0.7rem] sm:text-xs font-light">Tactile Materials & Timber Joinery</span>
                 </div>
-                <div className="bg-charcoal/80 backdrop-blur-md px-4 py-2 border border-ivory/10">
-                  <span className="text-[0.6rem] uppercase tracking-widest text-bronze-light block">Consultation</span>
-                  <span className="text-xs font-light">Architectural Space Planning</span>
+                <div className="bg-charcoal/80 backdrop-blur-md px-3 sm:px-4 py-2 border border-ivory/10">
+                  <span className="text-[0.55rem] sm:text-[0.6rem] uppercase tracking-widest text-bronze-light block">Consultation</span>
+                  <span className="text-[0.7rem] sm:text-xs font-light">Architectural Space Planning</span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Location & Access Information Card */}
-          <div className="lg:col-span-5 studio-reveal flex flex-col justify-between p-8 sm:p-10 bg-ivory border border-sand/70 rounded-sm shadow-sm">
+          <div className="lg:col-span-5 studio-reveal min-w-0 flex flex-col justify-between p-6 sm:p-8 lg:p-10 bg-ivory border border-sand/70 rounded-sm shadow-sm">
             <div className="space-y-8">
               {/* Location */}
               <div>

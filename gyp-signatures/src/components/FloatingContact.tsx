@@ -34,7 +34,7 @@ export default function FloatingContact() {
       </div>
 
       {/* Mobile Refined Contextual Action Bar: CALL · WHATSAPP · CONSULT */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-ivory/95 backdrop-blur-md border-t border-sand/80 px-6 py-2.5 flex items-center justify-between shadow-2xl safe-area-bottom">
+      <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-ivory/95 backdrop-blur-md border-t border-sand/80 px-3 sm:px-6 py-2.5 flex items-center justify-around sm:justify-between shadow-2xl safe-area-bottom">
         {/* Call Button */}
         <a
           href={`tel:${phoneTel}`}

@@ -71,7 +71,7 @@ export default function InteriorDesignSection() {
   return (
     <section ref={sectionRef} id="interior-design" className="bg-ivory overflow-hidden">
       {/* Hero banner */}
-      <div className="id-hero relative h-[50vh] md:h-[60vh] overflow-hidden">
+      <div className="id-hero relative h-[50vh] md:h-[60vh] overflow-hidden isolate">
         <Image
           src="/images/projects/villa.jpg"
           alt="Complete interior design — villa living and dining space"

@@ -247,7 +247,7 @@ export default function HeroVideo() {
         </div>
 
         {/* Signature Offer Announcement (Desktop lower-left, mobile above bottom action bar) */}
-        <div className="absolute bottom-[64px] sm:bottom-10 lg:bottom-12 left-4 sm:left-8 lg:left-14 z-20 pointer-events-auto">
+        <div className="absolute bottom-[64px] sm:bottom-10 lg:bottom-12 left-4 sm:left-8 lg:left-14 right-4 sm:right-auto max-w-[285px] z-20 pointer-events-auto">
           <HeroOffer />
         </div>
 

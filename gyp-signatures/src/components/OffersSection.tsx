@@ -254,7 +254,7 @@ export default function OffersSection() {
           {displayList.map((offer) => (
             <div
               key={offer.id}
-              className="offer-card group flex flex-col justify-between p-8 sm:p-10 bg-cream/70 border border-sand/70 rounded-sm hover:border-bronze/40 transition-all duration-500 shadow-sm"
+              className="offer-card group min-w-0 flex flex-col justify-between p-6 sm:p-8 lg:p-10 bg-cream/70 border border-sand/70 rounded-sm hover:border-bronze/40 transition-all duration-500 shadow-sm"
             >
               <div>
                 {/* Header Tag */}
@@ -314,7 +314,7 @@ export default function OffersSection() {
 
               {/* Bottom: Live Countdown + Action */}
               <div className="pt-6 border-t border-sand/60">
-                <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+                <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row sm:items-end lg:items-start xl:items-end justify-between gap-6">
                   <div>
                     <span className="text-[0.6rem] tracking-[0.2em] uppercase text-stone block mb-2 font-medium">
                       Time Remaining in Edition
@@ -323,7 +323,7 @@ export default function OffersSection() {
                   </div>
                   <a
                     href={offer.ctaHref}
-                    className="btn-primary text-xs py-3 px-6 tracking-[0.15em] shrink-0 text-center"
+                    className="btn-primary text-xs py-3 px-6 tracking-[0.15em] shrink-0 text-center w-full sm:w-auto lg:w-full xl:w-auto"
                   >
                     {offer.ctaText} →
                   </a>

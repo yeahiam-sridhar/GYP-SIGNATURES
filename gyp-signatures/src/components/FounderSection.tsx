@@ -84,7 +84,7 @@ export default function FounderSection() {
       id="founder"
       className="relative scroll-mt-24 py-16 sm:py-20 lg:py-24 bg-[#F9F7F2] border-t border-b border-sand/60"
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
         {/* Eyebrow Label */}
         <div className="mb-10 sm:mb-14 lg:mb-16 founder-reveal">
           <span className="text-[0.68rem] sm:text-xs tracking-[0.28em] uppercase text-bronze font-medium block">
@@ -95,8 +95,8 @@ export default function FounderSection() {
         {/* Editorial Two-Column Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 lg:gap-16 xl:gap-20 items-start">
           {/* Left Column: Portrait */}
-          <div className="lg:col-span-5 xl:col-span-5 founder-reveal">
-            <div className="relative aspect-[4/5] w-full max-w-sm sm:max-w-md mx-auto lg:max-w-none overflow-hidden rounded-[2px] bg-sand/20 shadow-[0_12px_32px_rgba(0,0,0,0.04)]">
+          <div className="lg:col-span-5 xl:col-span-5 founder-reveal min-w-0">
+            <div className="relative aspect-[4/5] w-full max-w-sm sm:max-w-md mx-auto lg:max-w-none overflow-hidden isolate rounded-[2px] bg-sand/20 shadow-[0_12px_32px_rgba(0,0,0,0.04)]">
               <Image
                 src={founder.image}
                 alt={`${founder.name}, ${founder.title} of ${businessContact.brandName}`}
@@ -113,7 +113,7 @@ export default function FounderSection() {
           </div>
 
           {/* Right Column: Identity, Belief Quote, Narrative & Studio */}
-          <div className="lg:col-span-7 xl:col-span-7 flex flex-col justify-start">
+          <div className="lg:col-span-7 xl:col-span-7 flex flex-col justify-start min-w-0">
             {/* Identity */}
             <div className="founder-reveal">
               <h2 className="heading-editorial text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-charcoal leading-[1.08] font-normal tracking-wide">

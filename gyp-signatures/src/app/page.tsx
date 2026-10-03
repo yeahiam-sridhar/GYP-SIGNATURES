@@ -29,7 +29,7 @@ export default function Home() {
       <Navigation />
       <ConsultationModal />
       <FloatingContact />
-      <main>
+      <main className="w-full max-w-full overflow-x-clip">
         {/* 01 Hero Video / High Quality Canvas Scroll */}
         <HeroVideo />
 

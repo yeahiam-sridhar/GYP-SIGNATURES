@@ -75,16 +75,16 @@ export default function ConsultationSection() {
             Have a space in mind? Let&apos;s talk about it. From architectural blueprints to bespoke custom furniture and styling, our studio team is here to guide you.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
             <button
               onClick={openConsultationModal}
-              className="btn-secondary py-3.5 px-8 text-xs tracking-[0.2em] uppercase"
+              className="btn-secondary py-3.5 px-6 sm:px-8 text-xs tracking-[0.2em] uppercase text-center w-full sm:w-auto"
             >
               Book a Consultation
             </button>
             <a
               href={`tel:${phoneTel}`}
-              className="btn-primary border-ivory/30 text-ivory hover:bg-ivory hover:text-charcoal py-3.5 px-7 text-xs tracking-[0.18em] uppercase"
+              className="btn-primary border-ivory/30 text-ivory hover:bg-ivory hover:text-charcoal py-3.5 px-6 sm:px-7 text-xs tracking-[0.18em] uppercase text-center w-full sm:w-auto"
             >
               Call {phoneDisplay}
             </a>

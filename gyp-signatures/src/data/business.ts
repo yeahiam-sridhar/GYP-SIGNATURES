@@ -9,6 +9,8 @@ export interface BusinessContact {
   phoneTel: string;
   whatsapp: string;
   whatsappUrl: string;
+  whatsappPrefillText: string;
+  whatsappHeroUrl: string;
   instagram: string;
   instagramHandle: string;
   instagramDisplay: string;
@@ -54,6 +56,9 @@ export const businessContact: BusinessContact = {
   phoneTel: '+919393972660',
   whatsapp: '919393972660',
   whatsappUrl: 'https://wa.me/919393972660',
+  whatsappPrefillText: 'Hello GYP SIGNATURES, I would like to discuss my space.',
+  whatsappHeroUrl:
+    'https://wa.me/919393972660?text=Hello%20GYP%20SIGNATURES%2C%20I%20would%20like%20to%20discuss%20my%20space.',
   instagram: 'https://www.instagram.com/gyp_signatures/',
   instagramHandle: '@gyp_signatures',
   instagramDisplay: 'Instagram → @gyp_signatures',

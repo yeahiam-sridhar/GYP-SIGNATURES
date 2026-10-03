@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import HeroOffer from './HeroOffer';
+import { businessContact } from '@/data/business';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -202,15 +203,46 @@ export default function HeroVideo() {
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-4">
-          <a href="#consultation" className="btn-secondary shadow-md text-xs sm:text-sm py-2.5 sm:py-3.5 px-6 sm:px-8">
-            Book a Consultation
-          </a>
+        <div className="flex flex-col items-center gap-3.5 sm:gap-4.5">
+          <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-4">
+            <a href="#consultation" className="btn-secondary shadow-md text-xs sm:text-sm py-2.5 sm:py-3.5 px-6 sm:px-8">
+              Book a Consultation
+            </a>
+            <a
+              href="#introduction"
+              className="btn-primary border-ivory/60 text-ivory bg-charcoal/30 backdrop-blur-sm hover:bg-ivory hover:text-charcoal shadow-md text-xs sm:text-sm py-2.5 sm:py-3.5 px-6 sm:px-8"
+            >
+              Explore Our World
+            </a>
+          </div>
+
+          {/* Tertiary Refined WhatsApp Action */}
           <a
-            href="#introduction"
-            className="btn-primary border-ivory/60 text-ivory bg-charcoal/30 backdrop-blur-sm hover:bg-ivory hover:text-charcoal shadow-md text-xs sm:text-sm py-2.5 sm:py-3.5 px-6 sm:px-8"
+            href={businessContact.whatsappHeroUrl || businessContact.whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat with GYP SIGNATURES on WhatsApp"
+            className="group inline-flex items-center gap-2.5 text-ivory/80 hover:text-ivory py-1.5 px-3 text-[0.68rem] sm:text-xs tracking-[0.22em] uppercase font-light drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)] transition-all duration-300 focus:outline-none focus-visible:ring-1 focus-visible:ring-bronze-light"
           >
-            Explore Our World
+            {/* Restrained bronze WhatsApp glyph */}
+            <svg
+              className="w-3.5 h-3.5 text-bronze-light transition-transform duration-300 group-hover:scale-110 shrink-0"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.06-1.503-.306-.987-.417-1.748-1.178-2.316-1.928-.277-.367-.626-.957-.626-1.564 0-.616.321-.918.435-1.037.114-.12.249-.149.333-.149.083 0 .166.002.239.006.077.004.18.016.275.244.1.238.341.832.371.893.03.062.05.134.009.215-.04.08-.06.13-.12.2-.06.07-.126.155-.18.208-.06.06-.123.125-.053.245.07.119.312.514.67.832.46.409.849.536.969.596.119.06.189.05.259-.03.07-.08.3-.35.38-.47.08-.12.16-.1.27-.06.11.04.7.33.82.39.12.06.2.09.23.14.03.05.03.5-.114.905z" />
+            </svg>
+            <span className="relative">
+              WhatsApp Us
+              <span className="absolute -bottom-0.5 left-0 w-0 h-[1px] bg-bronze-light transition-all duration-300 ease-out group-hover:w-full" />
+            </span>
+            <span
+              className="text-bronze-light transition-transform duration-300 ease-out group-hover:translate-x-1.5"
+              aria-hidden="true"
+            >
+              →
+            </span>
           </a>
         </div>
 

@@ -58,8 +58,7 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/icon.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
     ],
     apple: [
       { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
@@ -73,20 +72,20 @@ const jsonLd = {
     {
       "@type": "WebSite",
       "@id": "https://gypsignatures.com/#website",
-      url: "https://gypsignatures.com",
+      url: "https://gypsignatures.com/",
       name: "GYP SIGNATURES",
       description: "Luxury Interior Design & Bespoke Furniture Studio",
       publisher: {
-        "@id": "https://gypsignatures.com/#business",
+        "@id": "https://gypsignatures.com/#organization",
       },
     },
     {
-      "@type": ["LocalBusiness", "FurnitureStore", "ProfessionalService"],
-      "@id": "https://gypsignatures.com/#business",
-      name: businessContact.brandName,
+      "@type": ["Organization", "LocalBusiness", "FurnitureStore", "ProfessionalService"],
+      "@id": "https://gypsignatures.com/#organization",
+      name: "GYP SIGNATURES",
       legalName: businessContact.legalEntity,
-      url: "https://gypsignatures.com",
-      logo: "https://gypsignatures.com/images/logo-dark.png",
+      url: "https://gypsignatures.com/",
+      logo: "https://gypsignatures.com/logo.png",
       image: "https://gypsignatures.com/images/projects/villa.jpg",
       description:
         "An integrated luxury interior studio and bespoke furniture house in Andhra Pradesh, uniting spatial architecture, artisanal woodworking, hand-selected materials, and bespoke home elements.",

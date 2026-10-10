@@ -13,6 +13,7 @@ import MaterialsSection from '@/components/MaterialsSection';
 import CustomSection from '@/components/CustomSection';
 import DesignProcess from '@/components/DesignProcess';
 import FounderSection from '@/components/FounderSection';
+import CeoSection from '@/components/CeoSection';
 import InspirationSection from '@/components/InspirationSection';
 import StudioSection from '@/components/StudioSection';
 import OffersSection from '@/components/OffersSection';
@@ -71,6 +72,9 @@ export default function Home() {
 
         {/* 14 Founder Story: P. Gayathri */}
         <FounderSection />
+
+        {/* 14b CEO Profile: Praneetha P */}
+        <CeoSection />
 
         {/* 15 The Inspiration: Guiding Influence */}
         <InspirationSection />

@@ -36,6 +36,7 @@ export interface BusinessContact {
     bio: string[];
   };
   inspiration: {
+    name: string;
     title: string;
     subtitle: string;
     image: string;
@@ -88,6 +89,7 @@ export const businessContact: BusinessContact = {
     ],
   },
   inspiration: {
+    name: 'P. Kishore Kumar',
     title: 'THE INSPIRATION',
     subtitle: 'Every signature begins with an enduring influence.',
     image: '/images/inspiration.jpg',

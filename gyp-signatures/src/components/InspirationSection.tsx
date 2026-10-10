@@ -95,6 +95,19 @@ export default function InspirationSection() {
 
           {/* Narrative Column */}
           <div className="lg:col-span-7 space-y-6">
+            {/* Person Identity */}
+            <div className="inspiration-text-block">
+              <h2 className="heading-editorial text-2xl sm:text-3xl md:text-4xl text-charcoal leading-[1.08] font-normal tracking-wide">
+                {inspiration.name}
+              </h2>
+              <div className="mt-2 flex items-center gap-3">
+                <span className="w-6 h-[1px] bg-bronze" />
+                <span className="text-[0.68rem] tracking-[0.25em] uppercase text-bronze font-medium">
+                  Guiding Influence
+                </span>
+              </div>
+            </div>
+
             <div className="inspiration-text-block">
               <h3 className="heading-section text-xl md:text-2xl text-charcoal mb-4">
                 The Standards of Permanence
